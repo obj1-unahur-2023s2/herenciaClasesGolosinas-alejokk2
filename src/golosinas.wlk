@@ -79,10 +79,9 @@ class Chocolatin {
 	// hay que acordarse de *dos* cosas, el peso inicial y el peso actual
 	// el precio se calcula a partir del precio inicial
 	// el mordisco afecta al peso actual
-	var pesoInicial
+	var property  pesoInicial
 	var comido = 0
 	
-	method pesoInicial(unPeso) { pesoInicial = unPeso }
 	method precio() { return pesoInicial * 0.50 }
 	method peso() { return (pesoInicial - comido).max(0) }
 	method mordisco() { comido = comido + 2 }
@@ -92,10 +91,10 @@ class Chocolatin {
 }
 
 class GolosinaBaniada {
-	var golosinaInterior
+	var property golosinaInterior
 	var pesoBanio = 4
 	
-	method golosinaInterior(unaGolosina) { golosinaInterior = unaGolosina }
+	
 	method precio() { return golosinaInterior.precio() + 2 }
 	method peso() { return golosinaInterior.peso() + pesoBanio }
 	method mordisco() {

@@ -63,6 +63,13 @@ object mariano {
 	method tieneGolosinaDeSabor(_sabor) {
 		return golosinas.any({_golosina => _golosina.sabor() == _sabor})
 	}
+	method baniar(unaGolosina){
+		if(self.tieneGolosinaDeSabor(unaGolosina)){
+			self.comprar(unaGolosina.GolosinaBaniada())
+			self.desechar(unaGolosina)
+		}
+		else
+	}
 }
 
 
